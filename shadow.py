@@ -1,5 +1,4 @@
 #!/usr/bin/python3 
-
 import openai
 import sys, getopt
 import colorama
@@ -19,7 +18,7 @@ def main(argv):
         # getting command line arguments t: needs an argument if it is not present it will trigger an exeption and the code will stop with an exit status 2
         opts, args = getopt.getopt(argv, "t:")
     except getopt.GetoptError as opt_error:
-        error(opt_error)
+        error(opt_error.msg + "\n")
         sys.exit(2)
 
     for opt, arg in opts:
