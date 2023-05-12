@@ -50,8 +50,8 @@ def main(argv):
                 with open("/opt/shadow/.apikey", "a") as f:
                     f.write(apikey)
             except:
-                error("[!] You must be root to set a new api-key \n")
-                sys.exit(1)
+                error("[!] There has been a issue setting the apikey ¿permision error?\n")
+                
     
     #Model interactions
     openai.api_key = apikey
